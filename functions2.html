@@ -1,0 +1,64 @@
+<script>
+    /*let outer=()=>{
+       return ()=>{
+        return{"wish":"welcome"}
+       }
+    }
+    console.log(outer()().wish);
+     
+
+    
+    
+    let myfun=(ar1,ar2,ar3)=>{
+        console.log(ar1(),ar2(),ar3())
+    }
+    let fun1=()=>{
+        return "Hello1"
+    }
+    let fun2=()=>{
+        return "Hello2"
+    }
+    let fun3=()=>{
+        return "Hello3"
+    }
+    myfun(fun1,fun2,fun3)*/
+
+
+
+
+   /* function fun1(...arg1){
+        console.log(arg1);
+    }
+    function fun2(){
+        return "hi"
+    }
+    function fun3(){
+        return "hello"
+    }
+    fun1(fun2(),fun3())
+
+
+
+
+
+    function fun1(ar1="hi",ar2="hello"){
+        console.log(ar1,ar2);
+    }
+    fun1(null,"BALU");
+
+
+
+    function fun1(ar1,ar2="hi"){
+        console.log(ar1,ar2)
+    }
+    fun1(null,null)*/
+
+
+    function fun1(ar1,ar2="hello",...ar3){
+        console.log(ar1,ar2,ar3)
+    }
+    fun1()
+    fun1(undefined,undefined,undefined)
+    fun1(null,null,null,null)
+
+</script>

@@ -1,0 +1,166 @@
+<!-- collection of variables and functions is called as Class
+    *before es6 version class is created by 'constructor' functions
+    *in construct functions all members start with "this" keyword
+    *By using "new" keyword we can create object for constructor function -->
+
+
+    <script>
+      /*  function fun1(){
+        this.var1="hi"
+        this.var2="hello"
+        this.var3="Welcome"
+        this.fun2=function fun3(){
+            function fun4(ar1,ar2){
+                return `${ar1},${ar2}`
+            }
+            function fun5(){
+                return "hello1"
+            }
+            function fun6(){
+                return "hello2"
+            }
+            return fun4(fun5(),fun6())
+        }
+    }
+        let name1=new fun1();
+        console.log(name1.var1,name1.var2,name1.var3,name1.fun2())
+        let name12=new fun1();
+        console.log(name12.var1,name12.var2,name12.var3,name12.fun2())
+
+
+
+
+
+
+
+
+
+
+        function fun1(){
+        this.var1="hello"
+        this.fun2=function(parameter){
+            return parameter
+        }
+    }
+        let name1=new fun1()
+        console.log(name1.var1,name1.fun2("Balu"))
+
+
+
+
+
+
+
+
+
+
+
+//"prototype" is used to add the functions or variables dynamically in class  (where prototype is predefined property)
+    function fun1(){
+
+    }
+    fun1.prototype.var1="Hi"
+    fun1.prototype.fun2=function(){
+        return "React"
+    }
+    let name1=new fun1();
+    console.log(name1.var1,name1.fun2())
+
+
+
+
+
+
+
+//The data getting from parent class to child class is called "Inheritance" (which is technically called as "Prototype chaining")
+
+    function fun1(){
+
+    }
+    fun1.prototype.name1="Hi"
+    function fun2(){
+
+    }
+    fun2.prototype=Object.create(fun1.prototype)
+    fun2.prototype.name2="Hello"
+    let var1=new fun2()
+    console.log(var1.name1,var1.name2)
+
+
+
+
+
+
+
+
+
+
+
+    function fun1(){
+
+    }
+    fun1.prototype.var1="hello"
+    fun1.prototype.var2="bava"
+    function fun2(){
+
+    }
+    fun2.prototype=Object.create(fun1.prototype)
+    fun2.prototype.var3=function(){
+        return "Hello"
+    }
+    function fun3(){
+
+    }
+    fun3.prototype=Object.create(fun2.prototype)
+    fun3.prototype.var4="Welcome"
+    fun3.prototype.var5=function(){
+        function fun4(ar1){
+            return (ar1())
+        }
+        function fun5(ar2,ar3){
+            return `${ar2},${ar3}`
+        }
+        return fun5("dear","balu")
+      
+    }
+    let name1=new fun3()
+    console.log(name1.var1,name1.var2,name1.var3(),name1.var4,name1.var5())*/
+    
+
+
+
+
+
+
+
+    
+
+
+
+    // If the parent class functionality is override by child class functionality is called "Overriding" 
+
+
+    function fun1(){
+
+    }
+    fun1.prototype.dbfun=function(){
+        return "oracle"
+    }
+    function fun2(){
+
+    }
+    fun2.prototype=Object.create(fun1.prototype)
+    fun2.prototype.dbfun=function(){
+        return "data base"
+    }
+    let var1=new fun2()
+    console.log(var1.dbfun())
+
+
+
+
+
+
+        
+       
+    </script>

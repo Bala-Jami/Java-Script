@@ -1,0 +1,82 @@
+<script>
+        
+      /* function fun1(){
+           return "hello";
+       } function fun2(){
+           return fun1;
+       }function fun3(){
+           return fun2;
+       }function fun4(){
+           return fun3;
+       }
+       function fun5(){
+           return fun1;
+       }
+       
+       console.log(fun3()()());
+
+       function fun1(arg1,ar2,ar3,ar4){
+        return `${arg1},${ar2},${ar3},${ar4}`;
+        
+       }
+       console.log(fun1("mean","node","Vue","Mern"));*/
+
+
+
+
+       
+
+
+
+
+       function fun1(ar1,ar2,ar3,ar4,ar5){
+           console.log(ar1,ar2(),ar3(),ar4()(),ar5());
+       }
+
+       function fun2(){
+           return "Hi";
+       }
+
+       function fun3(){
+           return "Hello"
+       }
+
+       function fun4(){
+           return "Welcome"
+       }
+
+       function fun5(){
+           return fun4;
+
+        }
+       function fun6(){
+           function fun7(ar7,ar8){
+               return `${ar7},${ar8}`;
+           }
+           return fun7("node","buddy");
+       }
+       
+       fun1(fun2(),fun3,fun4,fun5,fun6);
+
+
+
+
+
+
+       
+      /* let fun1=(ar1,ar2,ar3)=>{
+           console.log(ar1(),ar2(),ar3());
+       }
+       function fun2(){
+           return "Hi"
+       }
+       function fun3(){
+           return "Hello"
+       }
+       function fun4(){
+           return "buddy"
+       }
+       fun1(fun2,fun3,fun4);*/
+       
+
+</script>

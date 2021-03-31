@@ -1,0 +1,81 @@
+<!-- These are used to control the flow of execution
+     # These functions will prefix with "*" and  each statement will start with "yield" keyword
+     #These functions by default returns "Cursor Mechanism"
+     #the default position of cursor is above first call
+-->
+<script>
+    /* function *fun1(){
+          yield "Hi"
+          yield "Hello"
+          yield "Balu"
+     }
+     let name1=fun1()
+     console.log(name1.next())
+     console.log(name1.next())
+     console.log(name1.next())
+     console.log(name1.next())
+
+
+
+
+     function *fun1(){
+          yield "100"
+          yield "100"
+     }
+     let mycursor =fun1()
+     console.log(mycursor.next())*/
+
+
+
+
+
+
+
+
+
+
+     function *fun1(){
+          yield "Angular"
+          yield "Node"
+          yield *fun2() 
+          yield "Vue"
+          yield fun3()  
+          
+     }
+     function *fun2(){
+          yield "mevn"
+     }
+     function fun3(){
+          function fun4(ar1,ar2){
+          return `${ar1},${ar2}`
+     }
+     return fun4("cool","dude")
+}
+     let name12=fun1()
+     console.log(name12.next())
+     console.log(name12.next())
+     console.log(name12.next())
+     console.log(name12.next())
+     console.log(name12.next())
+     console.log(name12.next())
+
+
+
+
+
+     
+
+
+     function *fun1(){
+          yield "Hi"
+          yield "Hello"
+          return 'welcome'
+          yield "Balu"
+     }
+     let name1=fun1()
+     console.log(name1.next())
+     console.log(name1.next())
+     console.log(name1.next())
+     console.log(name1.next())
+
+</script>

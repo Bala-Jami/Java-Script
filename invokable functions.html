@@ -1,0 +1,58 @@
+<!-- "IIFE" stands for immediate invokable functioning expressions
+    *These are used in booting time and this is introduced in 'es9'
+    *These are also called as self invokable functions so here we no need to call the function since it invokes functions automatically
+-->
+<script>
+    /*(()=>{
+        console.log("welcome");
+    })();
+
+
+
+
+    let res=(()=>{
+        return "hello"
+    })()
+    console.log(res)
+
+
+
+
+
+    ((ar1,ar2)=>{
+        console.log(ar1,ar2)
+    })("hi","balu")
+
+
+
+
+
+    function myfun(ar1,ar2){
+        console.log(ar1,ar2)
+    }
+    myfun((()=>{return "Hi"})(),
+    (()=>{return "darling"})()
+    )
+
+
+    
+    
+    
+    ((ar1,ar2)=>{
+        console.log(ar1,ar2)
+    })("Hello","Kutty") */
+
+
+    
+
+    
+
+    function myfun(ar1,ar2){
+        console.log(ar1,ar2)
+    }
+
+    myfun(((ar3,ar4)=>{
+        return `${ar3},${ar4}`
+    })("hi","hello"),
+    (()=>{return "darling"})())
+</script>
