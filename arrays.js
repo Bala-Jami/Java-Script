@@ -335,5 +335,66 @@ concatation of arrays: This is introduced in es6 and its symbol is "..."
 
 
 
+
+
 -> copyWithin()=This functiomn is used to shift the indexes
+
+    let ar1=[1,3,4,5]
+    ar1.copyWithin(2)
+    console.log(ar1)       //[ 1, 3, 1, 3 ]
+
+
+    ar1=[1,2,3,4,5,6]
+    ar1.copyWithin(0,6)
+    console.log(ar1)        //[ 1, 2, 3, 4, 5, 6 ]
+
+
+    let ar2=[1,2,3,4,5,6,7,8]                  
+        ar2.copyWithin(3,7)
+        console.log(ar2)                                                      
+                                                        
+    //[
+        1, 2, 3, 8,
+        5, 6, 7, 8
+    ]                             
+       
+
+    let ar1=[1,2,3,4,5,6,6,7]
+    ar1.copyWithin(5,2)
+    console.log(ar1)
+  //[
+    1, 2, 3, 4,
+    5, 3, 4, 5
+  ]
+
+
+    let ar1=[1,2,3,4,5,6,7,8,9,10]
+    ar1.copyWithin(2,3,7)
+    console.log(ar1)
+
+    //[
+        1, 2, 4, 5,  6,
+        7, 7, 8, 9, 10
+    ]
+
+
+
+
+
+
+
+*indexOf()= This function won't created indexes to repeated elements in array
+
+    let ar1=[1,2,3,3,3,4,4]
+    ar1.forEach((element,index)=>{
+        console.log(ar1.indexOf(element))
+    })                                        //[0,1,2,2,2,5,5]
+
 */
+
+let ar1=[10,20,30,20,30,10]
+console.log(
+    ar1.filter((element,index)=>{
+        return ar1.indexOf(element) === index;
+    })
+)                                            //[ 10, 20, 30 ]
