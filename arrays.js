@@ -390,11 +390,136 @@ concatation of arrays: This is introduced in es6 and its symbol is "..."
         console.log(ar1.indexOf(element))
     })                                        //[0,1,2,2,2,5,5]
 
-*/
 
-let ar1=[10,20,30,20,30,10]
-console.log(
-    ar1.filter((element,index)=>{
-        return ar1.indexOf(element) === index;
-    })
-)                                            //[ 10, 20, 30 ]
+
+    let ar1=[10,20,30,20,30,10]
+    console.log(
+        ar1.filter((element,index)=>{
+            return ar1.indexOf(element) === index;
+        })
+    )                               //[ 10, 20, 30 ]
+
+
+
+
+
+sort()= This function is used to arrange the elements of array in ascending or descending order
+--> "ar1-ar2" represents ascending order
+--> "ar2-ar1" represents descending order 
+
+
+    console.log(
+        [1,,5,4,3,8,8,10,7].sort((ar1,ar2)=>{
+            return ar2-ar1
+        })[2]
+    )                       //8
+
+
+
+
+    console.log(
+        [1,,5,4,3,8,8,10,7].sort((ar1,ar2)=>{
+            return ar1-ar2
+        })[2]
+    )                       //4
+
+
+
+
+    console.log(
+        [1,,5,4,3,8,8,10,7].sort((ar1,ar2)=>{
+            return ar1-ar2
+        })
+    )                     //[ 1, 3, 4, 5, 7, 8, 8, 10, <1 empty item> ]
+    
+
+
+
+
+
+
+--> forEach()=This function is used to iterate the array elements
+
+
+[1,2,3,4].forEach(
+    (element,index)=>{
+        console.log(element,index)
+    }
+)
+
+
+
+[{"pid":"brand1","pname":"shirt","pqty":14},
+{"pid":"brand2","pname":"pant","pqty":17},
+{"pid":"brand3","pname":"short","pqty":18}].forEach((element,index)=>{
+    console.log(index,element.pid,element.pname,element.pqty)
+})
+
+
+
+
+
+
+--> for...in loop= This loop is used to iterate the json objects
+
+
+for(let var1 in {
+    "pid":"brand1","pname":"shirt","pqty":14
+}){
+    console.log(var1,typeof var1)
+}
+                    //  pid string
+                    //  pname string
+                    //  pqty string
+
+
+
+let var1={"pid":"brand1","pname":"shirt","pqty":14}
+for(let obj1 in var1){
+    console.log(obj1,typeof obj1,var1[obj1])
+}
+
+          //  pid  string  brand1
+        //    pname  string  shirt
+         //   pqty  string   14
+
+
+
+
+
+
+
+
+--> for...of loop= this loop is used to iterate the data structures
+
+
+    for(let value of [1,2,3,4,5]){
+        console.log(value)
+    }
+
+
+
+
+
+
+
+-->some() = If atleast one element satisfies the condition then it returns true
+
+    console.log(
+        [1,2,3,4].some((element,index)=>{
+            return element >= 4
+        })
+    )                       //true
+
+
+
+
+
+
+-->every() = Here all elements should satisfies the condition then only it returns true
+*/
+    console.log(
+        [1,2,3,4].every((element,index)=>{
+        return element >= 3
+        })
+    )                   //false  
