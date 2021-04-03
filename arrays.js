@@ -517,9 +517,100 @@ for(let obj1 in var1){
 
 
 -->every() = Here all elements should satisfies the condition then only it returns true
-*/
+
     console.log(
         [1,2,3,4].every((element,index)=>{
         return element >= 3
         })
     )                   //false  
+
+
+
+
+
+--> Fill() = This function is used to replace the existed elements with new elements
+
+    let ar1=[10,20,30,4]
+    ar1.fill(50)
+    console.log(ar1)            //[ 50, 50, 50, 50 ]
+
+
+    let ar1=[10,30,20]
+    console.log(ar1.fill(50))   //[ 50, 50, 50 ]
+
+
+
+    let ar1=[10,30,20,4,5]
+    console.log(ar1.fill(100,1,3))      //[ 10, 100, 100, 4, 5 ]
+
+
+
+
+-->flat() = This function is used to create single dimensional array or it can change multi dimensional array to single dimensional array
+
+console.log(
+    [1,[2,3,4],[3,4],[5,6]].flat(1)
+)                               //[ 1 ,2 ,3 ,4 ,3 ,4 ,5 , 6 ]
+
+
+let ar1=[1,[2,3,4],[3,4],[5,6]]
+let ar2=ar1.flat(1)
+console.log(
+    ar2.filter((element,index)=>{
+    return ar2.indexOf(element) === index
+  })
+)                           //[ 1, 2, 3, 4, 5, 6 ]
+
+
+
+console.log(
+    [1,[[[3,4]]],[[[[5]]]],[[[6,7]]]].flat(Infinity)
+)                       //[ 1, 3, 4, 5, 6, 7 ]
+
+
+
+console.log(
+    [1,[[[3,4]]],[[[[5]]]],[[[6,7]]]].flat(Infinity).reduce((fstva,nxtval)=>{
+        return fstva+nxtval
+    })
+)                       //26
+
+
+
+
+
+
+
+
+--> flatMap() = The Combination of flat and map function is called flatMap
+
+
+let ar1=[1,2,3]
+let ar2=["one","two","three"]
+console.log(
+    ar1.map((element,index)=>{
+        return[element,ar2[index]]
+    }).flat(Infinity)
+)                               //[ 1, 'one', 2, 'two', 3, 'three' ]
+
+
+    let ar1=[1,2,3]
+    let ar2=["one","two","three"]
+    console.log(
+        ar1.flatMap((element,index)=>{
+            return [element,ar2[index]]
+        })
+    )                           //[ 1, 'one', 2, 'two', 3, 'three' ]
+
+
+
+
+
+--> reverse() = This function is used to reverse the array elements
+
+
+    console.log(
+        [1,2,3,45].reverse()
+    )
+
+*/
