@@ -613,4 +613,103 @@ console.log(
         [1,2,3,45].reverse()
     )
 
+
+
+
+
+
+--> Join():- This function is used to join the characters
+
+    console.log(
+        Array.from("Hello").reverse().join(" ")
+    )                                       //o l l e H
+
+
+
+
+
+--> padStart:- This function is used to add special characters at begining or increase the characters 
+
+console.log(
+    "hello".padStart(10,"@")
+)                                       //@@@@@hello
+
+
+
+
+
+--> padEnd:- This function is used to add or increase the characters at end or length of the string
+
+
+    console.log(
+        "hello".padEnd(10,"@")
+    )                                       //hello@@@@@
+
+
+
+
+
+--> substr():- This is used to print the string which is presented in main string
+
+console.log(
+    "Wlcome to my palace".substr(7,2)      //here 7 = index, 2 = length of required character
+)                                       //to 
+
+
+--> substring():- same to above function but method of execution is different
+    console.log("Wlcome to my palace".substring(7,9)        //here 7 = include index and 9 = exclude index
+)                                             //to
+
+
+
+
+
+--> repeat():- This function is used to repeat the elements 
+
+console.log("hi".repeat(3))             //hihihi
+
+
+
+
+--> lastIndexOf():- This function is used to know the index of repeated Element
+
+    let ar1=[10,10,3,5,5,3,10,4,5]
+    console.log(
+        ar1.lastIndexOf(5)
+    )                                       //8
+
+
+
+
+    *Here trim() function is used to remove spaces at begining and ending
+    *trimStart() function is used to remove spaces at begining
+    *trimEnd() function is used to remove spaces at ending
 */
+
+        let str="  wlcme to palace  "
+        console.log(str.length)             //19
+        console.log(str.trim().length)      //15
+        console.log(str.trimStart().length) //17
+        console.log(str.trimEnd().length)   //17
+
+
+
+        console.log(
+            "wlcm to Es11".split("").map((element,index)=>{
+                return[element]
+            })
+        )                               // [
+                                                [ 'w' ], [ 'l' ],
+                                                [ 'c' ], [ 'm' ],
+                                                [ ' ' ], [ 't' ],
+                                                [ 'o' ], [ ' ' ],
+                                                [ 'E' ], [ 's' ],
+                                                [ '1' ], [ '1' ]
+                                         //   ]
+
+
+   console.log(
+            "wlcm to Es11".split(" ").map((element,index)=>{
+          return[element]
+      })
+ )                                      //[ [ 'wlcm' ], [ 'to' ], [ 'Es11' ] ]
