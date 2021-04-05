@@ -73,4 +73,21 @@ console.log(
 
 
 
+                              
+    console.log(
+        "wlcm to Es11".split("")
+    )                               //      [  'w', 'l', 'c', 'm',
+                                               ' ', 't', 'o', ' ',
+                                        //     'E', 's', '1', '1']
+                                        
+
+    console.log(
+        "wlcm to Es11".split("").map((element,index)=>{
+            return[element]
+        })
+    )                                           //[ [ 'wlcm' ], [ 'to' ], [ 'Es11' ] ] 
+
+
+
+
 
