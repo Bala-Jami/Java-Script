@@ -1,0 +1,124 @@
+<!--
+    JSON is used to transfer the data over network
+    It is light weight that means it gives less burden on hardware
+    Before JSON we use XML but it is a heavy weight so we prefer JSON
+    Json is also called as JavaScript Objects
+
+
+
+<script>
+   /*
+    let key={
+        sub1:"react",
+        sub2:"Angular"
+    }
+    console.log(key.sub1,key.sub2)
+    */
+
+
+
+   let obj={
+       sub1:"Hello",
+       sub2:"Hi"
+   }
+   for (let key in obj){
+       console.log(key,obj[key])
+   }
+</script>
+
+
+
+<script>
+    let myobj={
+        sub1:sub1,
+        sub2:sub2
+    }
+    function sub1(){
+        return "welcome"
+    }
+    function sub2(){
+        return "go back"
+    }
+    console.log(myobj.sub1(),myobj.sub2())
+</script>
+
+
+
+
+<script>
+    let obj={
+        oracle:()=>{
+            return "hi"
+        } ,
+        mysql:()=>{
+            return "helo"
+        }
+    }
+    console.log(obj.oracle(),obj.mysql())
+</script>
+
+
+ 
+-->  freeze action means only reading access will be done but not update,write and delete
+-->  seal action means it allows only read and update action and it stops write and delete access
+
+
+<!--
+<script>
+    let obj={
+        sub1:"react"
+    }
+    Object.freeze(obj)
+    console.log(obj)                    //{sub1: "react"}
+    obj.sub2="node"
+    console.log(obj)                   //{sub1: "react"}
+    obj.sub1="react1"
+    console.log(obj)                //{sub1: "react"}
+    obj.sub1="reeact2"
+    console.log(obj)               //{sub1: "react"}
+    delete obj.sub1
+    console.log(obj)            //{sub1: "react"}
+
+
+
+    let myobj={
+        sub12:"react"
+    }
+    Object.seal(myobj)
+    console.log(myobj)              //{sub12: "react"}
+</script>
+
+-->
+
+<script>
+    /*
+
+    let obj={
+        key1:"hi"
+    }
+    Object.defineProperty(obj,"key2",{value:"helo",writable:false})
+    obj.key2="helo"
+    console.log(obj)                //{key1: "hi", key2: "helo"}
+    obj.key2="hmm"
+    console.log(obj)                //{key1: "hi", key2: "helo"}
+
+    */
+
+
+
+
+
+   let obj={
+       key1:"hi"
+   }
+   Object.defineProperties(obj,{"key2":{value:"hlo",writable:false},"key3":{value:"hllllo",writable:true}})
+   obj.key1="welcome"
+   obj.key2="well"
+   obj.key3="come"
+   delete obj.key2
+   console.log(obj)                 //{key1: "welcome", key2: "hlo", key3: "come"}
+   delete obj.key1
+   console.log(obj)                 //{key2: "hlo", key3: "come"}
+   delete obj.key3
+   console.log(obj)                 //{key1: "welcome", key2: "hlo", key3: "come"}
+</script>
