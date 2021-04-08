@@ -1,4 +1,4 @@
- 
+ /*
     console.log(3>2>1)  //false
 
 
@@ -86,6 +86,11 @@ console.log(
             return[element]
         })
     )                                           //[ [ 'wlcm' ], [ 'to' ], [ 'Es11' ] ] 
+
+*/
+
+
+
 
 
 

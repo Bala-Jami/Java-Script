@@ -28,3 +28,16 @@
 
 
 </script> 
+
+<script>
+    let value=(ar1,ar2)=>{
+        let key=new Set(ar1)
+        ar2.forEach(element => {
+            key.add(element)
+        });
+        return key
+    }
+    let ar1=[10,20,30,"balu"]
+    let ar2=["balu","reshma",40,20]
+    console.log(value(ar1,ar2))
+</script>

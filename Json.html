@@ -7,7 +7,7 @@
 
 
 <script>
-   /*
+   
     let key={
         sub1:"react",
         sub2:"Angular"
@@ -88,10 +88,10 @@
     console.log(myobj)              //{sub12: "react"}
 </script>
 
--->
+
 
 <script>
-    /*
+    
 
     let obj={
         key1:"hi"
@@ -101,8 +101,9 @@
     console.log(obj)                //{key1: "hi", key2: "helo"}
     obj.key2="hmm"
     console.log(obj)                //{key1: "hi", key2: "helo"}
-
-    */
+</script>
+    
+    
 
 
 
@@ -121,4 +122,40 @@
    console.log(obj)                 //{key2: "hlo", key3: "come"}
    delete obj.key3
    console.log(obj)                 //{key1: "welcome", key2: "hlo", key3: "come"}
+
+-->
+
+
+
+
+
+<script>
+let employes=[{"name":"books","qty":5,"count":100,"image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1ecSQSwG3QQtRlGZ1ItvV1q4is_-kkKjOMA&usqp=CAU"},
+                {"name":"pant","qty":5,"count":100,"image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1ecSQSwG3QQtRlGZ1ItvV1q4is_-kkKjOMA&usqp=CAU"},
+                {"name":"shirt","qty":5,"count":100,"image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1ecSQSwG3QQtRlGZ1ItvV1q4is_-kkKjOMA&usqp=CAU"}]
+                document.write(
+                 `<table border="2px" align="center" cellspacing="5px" cellpadding="5px">
+                        <tr>
+                            <th>S.no.</th>
+                            <th>name</th>
+                            <th>qty </th>
+                            <th>count</th>
+                            <th>image</th>
+                        </tr>
+                    `
+                
+                )
+                employes.forEach((element,index)=>{
+                    document.write(
+                        `<tr>
+                            <td>${index+1}</td>
+                            <td>${element.name}</td>
+                            <td>${element.qty}</td>
+                            <td>${element.count}</td>
+                            <td><img width="100px" src=${element.image}></td>
+                        </tr>
+                    `
+                    )
+                })
+                document.write(`</table>`)
 </script>

@@ -1,0 +1,23 @@
+<script>
+    // task is to print first three characterstics of day
+    function getday(d){
+        let date=new Date()
+        let days=["sunday","monday","tuesday","wednesday","thursday","friday","saturday"]
+        if(d==="tomorrow"){
+            date.setDate(date.getDate()+1)
+        }else if(d==="yesterday"){
+            date.setDate(date.getDate()-1)
+        }else if(d!="today"){
+            date =new Date(d)
+        }
+        let day=days[date.getDay()]
+        let charday=day.slice(0,3)
+        console.log(charday)
+    }
+    getday("yesterday")
+    getday("today")
+    getday("tomorrow")
+    getday("2021-04-07")
+    getday("2021-04-08")
+    getday("2021-04-09")
+</script>
