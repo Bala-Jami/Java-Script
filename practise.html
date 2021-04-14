@@ -1,5 +1,8 @@
+<!--
 <script>
+
     // task is to print first three characterstics of day
+
     function getday(d){
         let date=new Date()
         let days=["sunday","monday","tuesday","wednesday","thursday","friday","saturday"]
@@ -20,4 +23,258 @@
     getday("2021-04-07")
     getday("2021-04-08")
     getday("2021-04-09")
+</script>
+
+-->
+
+<!--
+<script>
+
+    // task is to print longest word in given string
+
+    function longest(str){
+    str=str.split(" ")
+    return str.sort((a,b)=>
+    b.length-a.length)[0]
+}
+console.log(longest("Hello guysysysysysysys this geeks geekkkkkkkk gekforgek"))
+</script>
+
+-->
+
+
+<!--
+<script>
+
+    // task is to find standard deviation of an array
+
+
+    function fun1(ar1){
+        let var1=ar1.reduce((fstva,nxtva)=>{
+             return fstva+nxtva
+            })/ar1.length
+        let arr=ar1.map((element)=>{
+            return (element-var1)**2
+        })
+        let sum=arr.reduce((fstva,nxtva)=>{
+           return fstva+nxtva
+    })
+        let variance=sum/ar1.length
+        console.log(variance)
+        return Math.sqrt(sum/arr.length)        // return Math.sqrt(variance)
+    }
+    
+    console.log(fun1([1,2,3,4,5]))
+</script>
+
+-->
+
+
+
+<!--
+<script>
+
+    // task is find difference between maximum and minimum in the array
+
+    function fun1(ar1){
+        let var1=ar1.sort((a,b)=>{
+          return  b-a
+        })[0]
+        let var2=ar1.sort((a,b)=>{
+          return  a-b
+        })[0]
+        let c=var1-var2
+        
+        return c
+    }
+    console.log(fun1([4,3,1,5]))
+    console.log(fun1([4,3,1,5,9,0]))
+</script>
+
+-->
+
+
+
+<!--
+<script>
+
+    //task is to print the maximum difference occurs between two adjacent elements
+    
+  //  let ar1=[1,2,3,4]
+ // let ar2=console.log(ar1.slice(0,2))
+ // let ar3=console.log(ar1.slice(1,3))
+  //  let ar4=console.log(new Set([...ar2,...ar3]))
+
+function fun1(ar1){
+     
+    let ar3= [ar1.slice(0,2).reduce((fstv,nxtv)=>{
+        return nxtv-fstv
+    }),ar1.slice(1,3).reduce((fstv,nxtv)=>{
+        return nxtv-fstv
+    }),ar1.slice(2,4).reduce((fstv,nxtv)=>{
+        return nxtv-fstv
+        
+    })].sort((a,b)=>{
+        return b-a
+    })[0]
+    
+   return ar3
+    
+    
+}
+
+console.log( fun1([2,3,1,4]))
+console.log( fun1([2,-3,1,-4,6]))
+
+
+</script>
+
+-->
+
+
+
+<!--
+
+<script>
+
+    // task is to check whether string is palindrome or not
+
+    function fun1(ar1){
+        let ar2=Array.from(ar1).reverse().join("")
+        
+        if(ar1===ar2){
+            return true
+        } else {
+            return false
+        }
+        return ar2
+    }
+    console.log(fun1("Hmmh"))
+    console.log(fun1("hmmmh"))
+</script>
+
+-->
+
+
+
+<!--
+<script>
+function fun1(ar1){
+    
+    // task is to print number of occurences of a letter in a given string
+
+    if (ar1.length==0){
+        console.log("Invalid")
+        return
+    }
+    for(let i=0;i<ar1.length;i++){
+        let count=0
+        for(let j=0;j<ar1.length;j++){
+            if(ar1[i]==ar1[j] && i>j){
+                break
+            }
+            if(ar1[i]==ar1[j]){
+                count++
+            }
+           
+        }
+        if(count>0){
+            console.log(`${ar1[i]} occurs ${count} times`)
+        }
+        
+
+    }
+    return ar1
+}
+console.log(fun1("dasass"))
+console.log(fun1("hello"))
+console.log(fun1(""))
+</script>
+
+-->
+
+
+
+<!--
+<script>
+
+    // task is to print factorial of a number when condition is true
+
+    function fun1(ar1){
+        if(ar1%2 ===0){
+            let fact=1
+            for(i=1;i<=ar1;i++){
+               fact  = fact*i
+            }
+            return fact
+        }
+        else {
+            return 0;
+        }
+    }
+    console.log(fun1(4))
+    console.log(fun1(5))
+
+</script>
+
+-->
+
+
+
+<!--
+<script>
+
+    // task is to print the sum if x is lessthan max value
+
+    function fun1(ar1){
+        let value=20
+        if(value>ar1){
+            let a=1
+            let b=0
+            let sum
+            for(i=0;i<ar1-1;i++){
+                sum=a+b
+                b=a
+                a=sum
+            }
+            return a
+        }
+        return sum
+    }
+    console.log(fun1(6))                    // 610
+</script>
+
+-->
+
+
+
+<!--
+<script>
+
+    // task is to print value of multiplication when condition is true i.e. ar1%3==0
+
+    function fun1(ar1){
+        if(ar1%3==0){
+            let fact=1
+            for(i=0;i<ar1-1;i++){
+                fact*=ar1
+            }
+            return fact
+        }
+        else{
+            return 0
+        }
+    }
+    console.log(fun1(6))                    // 7776 [6^5]
+    console.log(fun1(5))                    // 0
+</script>
+
+-->
+
+<script>
+
+    // task is to remove  falsy values in an array
+    // there are 7 falsy values they are: false,zero,empty string i.e. ("",'', ),Bigint,null,undefined,nan
+
+    
 </script>

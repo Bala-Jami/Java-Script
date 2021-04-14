@@ -1,0 +1,5 @@
+{
+    "products":[{"id":150,"name":"shirt","brand":"peter england","image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrAyZti3NrG4xUw2TdRZtQzaW4w1zSDsQs0Q&usqp=CAU"},
+            {"id":155,"name":"pant","brand":"pepejeans","image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrAyZti3NrG4xUw2TdRZtQzaW4w1zSDsQs0Q&usqp=CAU"},
+            {"id":152,"name":"track","brand":"rr","image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrAyZti3NrG4xUw2TdRZtQzaW4w1zSDsQs0Q&usqp=CAU"}]
+}
