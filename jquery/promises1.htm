@@ -1,0 +1,51 @@
+<!--
+    Here I want to deploy promises code in Jquery application
+    1) create Json file and Write code
+    2)create Jquery application
+    3) Now deploy code in it
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+     </head>
+<body>
+    <script>
+        function fun1(){
+            return new Promise((resolve,reject)=>{
+                $.ajax({
+                    method:"GET",
+                    url:"http://localhost:3000/products",       //br1.json link
+                    success:(pR)=>{
+                        resolve(pR)
+                    },
+                    error:(err)=>{
+                        rject(err)
+                    }
+                })
+            })
+            
+        }
+
+    /*  
+        -- latest approach
+
+
+         async function fun2(){
+            const r=await fun1()
+            console.log(r)
+        }
+        fun2()              // [{…}, {…}, {…}]
+
+    */
+
+    // -- advanced latest version
+    
+   (async()=>{
+       console.log(await fun1())
+   })()                     // [{…}, {…}, {…}]
+       
+    </script>
+</body>
+</html>

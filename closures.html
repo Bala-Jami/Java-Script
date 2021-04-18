@@ -1,0 +1,57 @@
+<!--
+
+Closures :- Accessing outer function data as well as global data by inner function is called as Closures
+                                (or)
+            if inner function access the outer function is called Closures
+
+-->
+
+
+<!--
+<script>
+    function fun1(){
+        let a=10;
+        let b=20;
+        return ()=>{
+            console.log(a)
+        }
+    }
+    console.dir(fun1())         //Closure (fun1) {a: 10}
+</script>
+
+
+
+<script>
+    for(var i=0;i<5;i++){
+        setTimeout(()=>{
+            console.log(i)
+        },2000)
+    }                       // 5
+</script>
+
+
+
+// var keyword won't have capability to maintain multiple copies in closures due to this all old values is replace with new value 
+    this bug can be replace by using let keyword and iife (ES9 solution)
+
+-->
+
+
+<script>
+    for(let i=0;i<5;i++){
+        setTimeout(()=>{
+            console.log(i)
+        },2000)
+    }           // 0,1,2,3,4
+</script>
+
+
+<script>
+    for(var i=0;i<5;i++){
+        ((i)=>{
+            setTimeout(()=>{
+                console.log(i)
+            },3000)
+        })(i)
+    }           // 0,1,2,3,4
+</script>

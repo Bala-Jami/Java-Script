@@ -9,6 +9,7 @@
     * Promises is also called special javascript objects
     * Promises are eager loading
 
+
 <script>
     let promise1=new Promise((ar1,ar2)=>{
         ar1("we will discuss")
@@ -33,7 +34,7 @@
     promise1.then((pR)=>{console.log(pR)},(eR)=>{console.log(eR)})
 </script>
 
--->
+
 
 <script>
     let promise1=new Promise((ar1,ar2)=>{
@@ -52,3 +53,51 @@
         console.log(eR)
     })
 </script>
+
+
+
+// race() :- The less time of promise class is gives as an output
+
+<script>
+    let promise1=new Promise((resolve,reject)=>{
+        setTimeout(()=>{resolve("hi")},2000)
+    })
+    let promise2=new Promise((resolve,reject)=>{
+        setTimeout(()=>{resolve("hlo")},1000)
+    })
+    Promise.race([promise1,promise2]).then((posRe)=>{
+        console.log(posRe)
+    },(err)=>{
+        console.log(err)
+    })              // hlo
+</script>
+
+
+
+
+<script>
+    let promise1=new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("hi")
+        },0)
+    })
+    let promise2=new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            reject("hlo")
+        },1000)
+    })
+    Promise.all([promise1,promise2]).then((pR)=>{
+        console.log(pR)
+    },(eR)=>{
+        console.log(eR)
+    })              //hlo (-> because negative response has more impact than positive response )
+    Promise.allSettled([promise1,promise2]).then((pR)=>{
+                console.log(pR)
+    },(er)=>{
+        console.log(eR)
+    })          // allSettled() is used to know complete status of promises
+</script>
+
+// * Due to Promises outdated, Promises replaces is observable 
+-->
+
