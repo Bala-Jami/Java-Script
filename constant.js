@@ -16,7 +16,7 @@
 
   const arr=[10,30]
   arr[3]=100;
-  console.log(arr)*/
+  console.log(arr)
 
 
 
@@ -34,3 +34,6 @@
   var1.key1='react'
   var1.key2='vue'
   console.log(var1)
+
+  */
+

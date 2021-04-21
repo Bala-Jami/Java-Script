@@ -1,0 +1,170 @@
+<!--
+    In json if we use keys as Json Objects then old key is replaced with new or latest key 
+    to avoid this bug data structures are introduced
+    Eg:- <script>
+            let obj1={};
+            let key1={};
+            let key2={};
+            let value1="Hlo";
+            let value2="hi"
+            obj1[key1]=value1
+            obj1[key2]=value2
+            console.log(obj1)           // {object object hi}
+        </script>
+
+  * There are 4 types of data structures they are :- 1)Map  2)WeakMap  3)set  4)Weakset
+-->
+
+<!--
+// First I want to know "map" API(application programing interface) for that use dir(directories) in the place of log
+
+
+<script>
+    let map =new Map()
+    console.dir(map)
+</script>
+
+- clear() :- This function is used to delete or remove complete data from map
+
+- constructor :- This is used to create object to respected data structure i.e. map,weakmap,set,weakset
+                *This can be denoted as map(),weakmap(),set(),weakset()
+
+- delete() :- This is used to delete particular key
+
+- get() :- This is used to get the data
+
+- has() :- This is used to check the key is present or not in boolean format
+
+- keys() :- To take all the keys
+
+- values() :- To take all the values
+
+- size :- This is a property not a function and it is used to know size required data structure
+
+- set() :- To add the data
+
+- entries(),forEach,for...of() are used to iterate the data structures
+
+* Map() data structure allows all types of data types and it don't allows duplicate data
+
+
+<script>
+    let map= new Map()
+    map.set("key1","hlo")
+    console.log(map)            // {"key1" => "hlo"}
+    map.set(10,3)
+    console.log(map)            // {10 => 3}
+    map.set(true,false)
+        .set({},{"key2":"hi"})
+    console.log(map)            // {true => false, {…} => {…}}
+</script>
+
+
+-->
+
+
+<!--
+<script>
+    let map1=new Map()
+    let key1={}
+    let value1="hlo"
+    let key2={}
+    let value2="hi"
+    map1.set(key1,value1).set(key2,value2)          
+    console.log(map1)                         // { {Object => "hlo"}
+                                            // {Object => "hi"} }
+    for(let [k,v] of map1){
+        console.log(k,v)
+    }               // {}__proto__: Object "hlo"    (* This output is due to iteration)
+                    // {}__proto__: Object "hi"
+    console.log(map1.get(key1))     // hlo
+    console.log(map1.has(key1))    // true
+    console.log(map1.has(key1))      // true
+    console.log(map1.has(value1))   // false
+    console.log(map1.has(value2))    // false
+    map1.clear()
+    console.log(map1)           // Map(0) {}
+
+</script>
+
+-->
+
+
+
+
+
+<!--
+
+ // * As we know map allows all data types if I want to allow only "Json Objects" then use Weak Map() data structures
+
+ <script>
+     let map1=new WeakMap()
+     console.dir(map1)
+ </script>
+
+    - Here we have 5 functions they are :- constructor , delete() , get() , has() , set()
+
+
+    <script>
+        let map1=new WeakMap()
+        let key1={}
+        let value1="hi"
+        let key2={}
+        let value2="hlo"
+        map1.set(key1,value1,key2,value2)                   // {Object => "hi"}
+            .set(key2,value2)               // {Object => "hlo"}
+        console.log(map1)
+        console.log(map1.has(key1))             // true
+    </script>
+
+//  if we want to change output from object element to array elements then use spread operator i.e  [...]
+
+
+
+
+
+
+
+
+
+- Set data structure :- This is used to eliminate the duplicate data
+
+
+<script>
+    let set1= new Set()
+    console.dir(set1)
+
+</script>
+ 
+    * It access some functions are  1)add() , 2)clear() , 3) constructor , 4) delete() , 5) entries() , forEach , for...of()
+        6) has() , 7) values()
+
+
+
+<script>
+    let set1=new Set()
+    set1.add(10)
+        .add(40)
+    console.log(set1)           // {10, 40}
+    console.log([...set1])      // [10, 40]
+</script>
+-->
+
+
+<script>
+    console.log(...new Set(["hi","hlo",100]))       // hi hlo 100
+    console.log(new Set(["hi","hlo",100]))           // {"hi", "hlo", 100}
+</script>
+
+
+<script>
+    let set1= new Set()
+    set1.add("Hlo")
+        .add("Hi")
+        .add(100)
+        .add({})
+    console.log(set1)
+    console.log(set1.size)                  // 4
+</script>
+
+    * As Set data structure allows all types of data types if we want to add only "json objects" then use Weakset

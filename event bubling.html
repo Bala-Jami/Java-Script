@@ -1,0 +1,128 @@
+<!--
+    In this "sub-child" includes of output of "child" and "parent" ; "child" includes output of "parent" only but "not sub-child"
+    and "parent" has its output only this method is called "event bubling"
+    In this "output order" is "sub-child , child , parent"
+    If above "output order" is "reverse" i.e. "parent , child , sub-child" then it is called "event capturing"
+
+    * To break event chain then use class="stopPropagation"
+
+
+    -- event bubling :-
+
+<!DOCTYPE html>
+<html>
+    <head><title>event bubling</title>
+        <style>
+            #parent{
+                width:300px;
+                height:300px;
+                border:1px solid rebeccapurple;
+                text-align:center
+            }
+            #child{
+                width:200px;
+                height:200px;
+                border:1px solid red;
+                margin-top:1rem;
+                margin:auto;
+                padding:1rem;
+            }
+            #sub-child{
+                width:100px;
+                height:100px;
+                border:1px solid pink;
+                margin-top:1rem;
+                margin:auto;
+                padding:1rem;
+            }
+        </style>
+
+    </head>
+    <body >
+        <div id="parent">
+            parent
+            <div id="child" >
+                Child
+                <div id="sub-child" >
+                    sub-child
+                </div>
+            </div>
+        </div>
+        <script>
+            document.getElementById("parent").addEventListener("click",()=>{
+                console.log("parent")
+            })
+            
+            document.getElementById("sub-child").addEventListener("click",()=>{
+                console.log("sub-child")
+            })
+            document.getElementById("child").addEventListener("click",(e)=>{
+                    e.stopPropagation()
+                    console.log("child")
+            })
+        </script>
+    </body>
+</html>
+
+
+
+
+
+ -- event capturing :-
+
+<!DOCTYPE html>
+<html>
+    <head><title>event bubling</title>
+        <style>
+            #parent{
+                width:300px;
+                height:300px;
+                border:1px solid rebeccapurple;
+                text-align:center
+            }
+            #child{
+                width:200px;
+                height:200px;
+                border:1px solid red;
+                margin-top:1rem;
+                margin:auto;
+                padding:1rem;
+            }
+            #sub-child{
+                width:100px;
+                height:100px;
+                border:1px solid pink;
+                margin-top:1rem;
+                margin:auto;
+                padding:1rem;
+            }
+        </style>
+
+    </head>
+    <body >
+        <div id="parent">
+            parent
+            <div id="child" >
+                Child
+                <div id="sub-child" >
+                    sub-child
+                </div>
+            </div>
+        </div>
+        <script>
+            document.querySelector("#parent").addEventListener("click",()=>{
+                console.log("parent")
+            },true)
+            
+            document.querySelector("#sub-child").addEventListener("click",()=>{
+                console.log("sub-child")
+            },true)
+            document.querySelector("#child").addEventListener("click",(e)=>{
+                    e.stopPropagation()
+                    console.log("child")
+            },true)
+        </script>
+    </body>
+</html>
+
+-->
