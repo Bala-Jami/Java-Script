@@ -1,0 +1,105 @@
+<!--
+    -- events :- when user or browser manipulates the page are called events
+    some types :- 1) onclick events 2) mouseover and mouseout events 3) onfocus events 4)keydown and keyup events
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Events</title>
+    </head>
+    <body>
+        <fieldset style="width:20rem;height:10rem">
+        <br><br>
+        <legend>login</legend>
+        <input type="text"id="uname"><br><br>
+        <input type="text"id="upd"><br><br>
+        <button onclick="login()">login</button>
+        </fieldset>
+        <script>
+            function login(){
+                console.log(document.getElementById("uname").value)
+                console.log(document.getElementById("upd").value)
+                if(document.getElementById("uname").value === document.getElementById("upd").value){
+                    alert("login successfully")
+                }else{
+                    alert("Try again")
+                }
+            }
+        </script>
+    </body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>mouseover Ex</title>
+    </head>
+    <body>
+        <div>
+            <div style="width:200px;border:1px solid green;text-align:justify;padding:1rem;margin:auto" onmouseover="fun1()" onmouseout="fun2()">
+            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat deserunt incidunt ullam facilis dolor odit. Quaerat laboriosam assumenda nemo nihil quae cumque, vel quam veritatis iure a excepturi numquam mollitia quasi esse est itaque eos libero recusandae fugiat quos velit doloremque dolore? Ipsam incidunt esse perferendis id, nostrum eligendi et.</div>
+            </div>
+        </div>
+        <script>
+            function fun1(){
+                console.log("mouseover")
+            }
+            function fun2(){
+                console.log("mouseout")
+            }
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>onfocus Ex</title>
+    </head>
+    <body>
+        <input type="text" id="my" onfocus= "myfun()" onblur="fun2()">
+        <script>
+            function myfun(){
+                document.getElementById("my").style.background="red"
+            }
+            function fun2(){
+                document.getElementById("my").style.background="pink"
+            }
+        </script>
+    </body>
+</html>
+
+-->
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>keydown Ex</title>
+    </head>
+    <body>
+        <input type="text" id="my" onkeydown="fun_one()" onkeyup="fun_two()" onkeypress="FUN3()">
+        <script>
+            function fun_one(){
+                console.log("Keydown")
+            }
+            function fun_two(){
+                console.log("Keyup")
+            }
+            function FUN3(){
+                console.log("keypress")
+            }
+           
+        </script>
+    </body>
+</html>

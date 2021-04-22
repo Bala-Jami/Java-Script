@@ -1,0 +1,27 @@
+<!--
+  --Throttling :-  Simply it is similar to debouncing but here it consists only first request and ignores all other requests with in time
+    after respected time completed again it takes as another request 
+-->
+<!DOCTYPE html>
+<html>
+    <head><title>Throttling</title></head>
+    <body>
+        <button id="my">Pay..!</button>
+        <script>
+            balu=(fn,delay)=>{
+                let last=0
+                return function(...args){
+                    let currentclick=new Date().getTime()
+                    if(currentclick-last<delay){
+                        return
+                    }
+                    last=currentclick
+                    return fn(...args)
+                }
+            }
+            document.getElementById("my").addEventListener("click",balu (()=>{
+                console.log("hlo")
+            },2000))
+        </script>
+    </body>
+</html>

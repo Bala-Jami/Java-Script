@@ -1,0 +1,29 @@
+<!--
+   -- Debouncing :- Considering latest request and ignoring all old requests is called debouncing
+-->
+    <!DOCTYPE html>
+    <html>
+        <head><title>Debouncing</title></head>
+        <body>
+            <button id="my">Pay..!</button>
+            <script>
+                const fun2=(fn,delay)=>{
+                    let interrupt;
+                    return function(...args){
+                      
+                        
+                        if(interrupt){
+                            clearTimeout(interrupt)
+                        }
+                        interrupt= setTimeout(()=>{
+                            fn(...args)
+                        },delay)
+                        
+                    }
+                }
+                document.getElementById("my").addEventListener("click",fun2 (()=>{
+                    console.log("proceed to pay")
+                },2000))
+            </script>
+        </body>
+    </html>
