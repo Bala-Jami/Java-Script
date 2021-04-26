@@ -1,0 +1,47 @@
+<!--
+    dom :- document object model (This is used to manipulate the html page data)
+
+    -- if whole html loaded into browser engine then document object prepared
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM</title>
+    </head>
+    <body>
+        <p id="my"></p>
+        <script>
+            document.getElementById("my").innerHTML="Helo"
+        </script>
+    </body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            let btn=document.createElement("button")
+            btn.innerHTML="click"
+            document.body.appendChild(btn)
+        </script>
+    </body>
+</html>
+
+-->
+
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <p id="p1">First</p>
+        <p id="p2">second</p>
+    </body>
+    <script>
+        console.log(document.getElementById("p1").firstChild.nodeValue)
+        document.getElementById("p2").innerHTML=document.getElementById("p1").firstChild.nodeValue
+    </script>
+</html>

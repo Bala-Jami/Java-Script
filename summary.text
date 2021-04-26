@@ -1,0 +1,610 @@
+                                            ---- Over view ----
+
+
+-----------------------------------------------**************************-------------------------------------------------
+
+
+< git instructions - 1) npx gitignore node
+    2) git init     3) git add.
+    4) git commit -m "file name"
+    5) paste link from git repository
+    6) git push -u origin master
+>
+* Html is used to develop webpages 
+* We will execute webpages by using browser
+
+
+
+
+                        ---- Java Script ----
+
+-> "J.S" is a "scripting language" and it is introduced by "Netscape"
+-> Its current version is ES11/2020 (ES-ECMA Script)
+-> It is used in Angular/React/Node/Vue Js
+-> let & const keywords are introduced in ES6
+-> Browsers contains internal tool is interpreter which used for execution
+-> J.s Can be executed by 2 ways :- 1) Browser 2) node tool (which is present in node Js)
+-> J.s is object based scripting language because netscape company provides so many objects i.e. window,console,document,date,time,etc
+
+
+
+                            ---- Installation of Software ----
+
+1) download and install Visual studio Code
+2) install recomended extensions of visual studio Code
+3) download and install node js (=> node is present in node Js)
+4) create gitHub account for storing purpose
+* for execution :- view -> terminal -> open command propmt -> type : node "filename.js"
+
+
+
+
+                        --- variables ---
+
+-> variablesis used to store the data and it can store string,number,boolean,arrays,objects,etc
+-> Variables should not start with digits or numbers
+-> we can declare a keyword with var/let/const
+* string:- collection of characters
+-> we can represent string in 3 ways :- 1) " " (double quotes)
+            2) ' ' (single quotes)   3) ` ` (back tick operator)
+-> for back tick operator has different syntax at execution i.e.
+            eg:- var sub="Java Script"
+                 var wish=` welcome to ${sub}`
+                 console.log(wish)
+-> Types of numbers :- 1) decimal numbers (eg: 100)
+        2) binary numbers [0b]  (eg: 0b 1001)
+        3) double numbers (eg: 100.12)
+        4) hexa decimal [0x] (eg: 0x 123ABC)
+        5) octal numbers [0o] (eg: 0o 123)
+-> Boolean - true or false (* It can be represented with flag )
+
+-> difference between var and let keyword :-
+
+    1) Var keyword breaks scope rule (i.e. for entire iteration in loop it gives output as last value by replacing all old values)
+        * Let keyword obeys scope rule
+    2) Var keyword allows duplicate variables
+        * Let keyword won't allows duplicate variables
+    3) Var keyword causes global polluting issue (i.e. var members always act as global members)
+        * Let keyword avoids global polluting issue(i.e. Let members act as local scope members)
+    4) Var keyword causes Variable hoisting
+        * By using Let keyword we can avoid variable hoisting
+-> We have 3 rules :- 1) declaration of variable
+    2) initialize  the value in variable
+    3) access the data
+-> Variable hoisting :- If we access any variable before its declaration and initialization is called variable hoisting
+
+
+
+
+                                ---Data Types--
+
+    1) undefine :- if we declare variable but we not assign any value then answer or output is undefined
+    2) null ( Eg: var data1= null)
+    3) symbol :- This is used as 'security' for 'private data' or data
+                * This is introduced in ES11/ES2020
+    4) boolean data type
+    5) number data type 
+        -> it involves decimal,double,binary,hexa decimal,octal,binary
+    6) String data type
+* (``)back tick operator also called as template literal
+
+
+
+
+                                    ---- Functions Types -----
+
+    1) Named functions :- The functions with custom name is called Named functions
+    Rules:- 1) function definition and 2) function calling
+    syntax :- function fun1(ar1,ar2...){
+                    // business logic
+                }
+                fun1(parameter1,parameter2,.....)
+
+    2) Anonymous function :- The function without name is called Anonymous function
+        *These are also called as Arrow functions (from ES6)
+        *These are secured than named functions
+        *These are behaves like callback function
+    syntax :- let name =(ar1,ar2,...)=>{
+                        // business logic
+                    }
+                    name(parameter1,parameter2,...)
+
+
+                         --- Rest Parameters ---
+
+    If we want to hold morethan 1 argument values in single argument then rest parameters are used (ES6)
+    * This is represented by using "..." symbol
+    * Each function accept only one rest parameter
+    * rest parameters should be last in arguments
+    -> syntax :- function fun1(ar,...ar2){
+                    console.log(ar,ar2)
+                }
+                fun1("hi","hlo","Hmm")
+
+
+
+
+                        --- Default Parameters ---
+
+    while defining functions,we will initialize the arguments with default values  (ES6)
+    syntax :- function fun1(ar1="hlo"){
+                    console.log(ar1)
+                }
+                fun1()
+
+
+
+                        --- Arithmetic Operations ---
+
+        In case of any arithmetic operations string data type is internally converted to number data type except in "+" operator
+        i.e. console.log(10-"7") // 3 ,etc where as console.log(10+"10") //1010
+        -> double quote(==) compares only content where as triple quote(===) compares both content and data type
+        -> "typeof" operatoris used to know the data type
+
+
+
+                            ---- class ----
+
+        * collection of variables and functions is called as class
+        -> Before "ES6 or older javascript version" class is created by "constructor functions"
+        -> In constructor function all members should start with "this" keyword
+        -> We can create "object" to "constructor function" by using "new" keyword
+
+
+
+                            ---- IIFE ----
+
+        This is used in booting time 
+        -> iife means (immediate invokable functional expressions) [ES9]
+        -> Here no need to use call function, it invokes functions automatically,so these are called as self invokable functions
+        syntax :- ((ar1,ar2,...etc)={
+             // business logic
+             })(parameter1,parameter2,...etc)
+
+
+
+
+                            ---- Generators ----
+
+        These are used to control the flow of execution [ES6]
+        -> Generator functions will prefix with "*"
+        -> In this each statement will start with "yield" keyword
+        -> These functions by default returns "cursor mechanism"
+        -> The "default position" of cursor mechanism is "above first call"
+        syntax :- function *fun1(){
+                    yield "hi"
+                }
+                let my =fun1()
+                console.log(my.next())
+
+
+
+
+                            ---- Constructor Functions ----
+
+-> "this" keyword used to refer current class member
+-> Prototype is used to add functions,variables dynamically in class
+-> Prototype is a predefined property
+-> If the data getting from parent class to child class is called "Inheritance" which is technically called as "Prototype Chaining"
+-> If "parent class function" is override by "child class function" is called "overriding"
+            (or) overriding the parent class functionality with child class functionality is called overriding
+
+
+
+                                    ---- About constant keyword ----
+
+                * This is also used to declare the variables  but here we can't modify data in it   [ES6]
+                -> By using const keyword we can't replace (or) modify "entire array or json object" but we can modify the values in it
+
+
+
+
+
+                                ---- optional parameters ----
+
+        While calling functions we can make few parameters are optional
+        * It is represented by "?"
+        -> optional parameters will work only in "typescript" environment
+        ->Type Script is a programming language which follows OOPS and it can save with extension ".ts" (which is given by microsoft)
+        -> we can install typescript software by using following command in system command prompt
+                "npm install -g typescript" 
+                (where npm- node packaging manager and g stands for global Installation)
+        * conversion of typescript code to equivalent javascript code is called "transpilation"
+        * "tsc" is the tool which performs transpilation (where tsc= typescript compiler)
+        -> At execution :- first type in terminal -> tsc filename.ts -> press enter -> node filename.js
+    syntax :- function fun1(ar1?:string,ar2?:number):void{
+                    //  logic
+                }
+                fun1("hlo",10) 
+        * Always optional parameters should be "last" in combination of "regular and optional parameters"
+
+
+
+
+
+
+                                ---- Arrays ----
+
+    * Arrays can be defined as collection of heterogeneous indexed elements
+-> Arrays can be iterate with the help of for(),while(),do...while(),forEach(),for...of(),for...in()
+-> Present for,while and do...while are outdated and Mainly forEach() loop is used to iterate the arrays
+-> We will access array elements by using indexes
+->      syntax for forEach :-   variable name.forEach((element,index)=>{console.log(element,index)})
+
+        --Properties :-
+
+    1) Length :- It is used to know the length of the array
+        syntax :- let var1 =[1,4,2,3]
+                  console.log(var1.length)
+
+    2) Delete :- It is used to delete particular element which is a predefined property
+        * Here deleted element is replaced with empty element i.e. this can delete element but not its memory this is the drawback occurs in delete property
+
+    3) map() :- It is used to manipulate the each and every element in array and it return the new array
+      syntax :- console.log([elements].map((element,index)=>{
+                                    return element
+                                })
+                            ) 
+
+    4) filter() :- This function is used to create new array based on condition
+      syntax :- console.log([elements].filter((elemnt,index)=>{
+                            return elemnt >= 3
+                        }))
+
+    5) Reduced function :- This is used to find sum of the elements
+      syntax :- console.log([elements].reduce((fst value, nxt value)=>{
+                                return fst value + nxt value
+                            }))
+
+    6) Reduceright() :- This function is used to find summation as well as to print the elements from right to left
+            syntax :- console.log([elements].((ar1,ar2)=>{
+                        return ar1+ar2 (or) return ar1+" "+ar2
+                    }))
+
+    7) push() :- This function is used to "add" the elements at "end of array"
+    8) pop()  :- This function is used to "remove" the elements at "end of array"
+    9) unshift():- This function is used to "add" element at "begining of array"
+    10) shift() :- this function is used to "remove" element at "begining of array "
+     syntax :- let ar1=[4,2,7,9,0]
+                ar1.push(50)  (or)  ar1.shift()
+    
+    11) splice() :- Add or Remove any element from array
+      syntax :- array.splice(required element index , number of elements)
+
+    12) slice() :- This function is used to print particular elements in the  array
+      syntax :- array.slice(included index number, excluded index number)
+
+    13) findIndex() :- this is used to find index of a particular element 
+        syntax :- array.findIndex((element,index)=>{
+                    return element === 40
+                })
+
+    14) find() :- This function is used to find particular element is exist or not 
+     * In this if we check the "element which is not present in array" then output is "undefined"
+
+    15) includes() :- This function is used to search the element which is a boolean function
+        syntax :- console.log(array.includes(element))
+
+    16) copyWithin() :- This function is used to shift the indexes
+        syntax :- array.copyWithin(incleded element, excluded element)
+
+    17) indexof() :- This function won't create indexes to repeated elements
+        syntax :- ar1.forEach((element,index)=>{
+                    console.log(ar1.indexof(element))
+                })
+
+                    (or)
+
+                ar1.filter((element,index)=>{
+                    return ar1.indexof(element) === index
+                })
+
+    18) sort() :- This function is used to arrange the elements of array in descending or ascending order
+        -> ar1-ar2 : ascending order
+        -> ar2-ar1 : descending order
+     syntax :- array.sort((ar1,ar2)=>{
+                    return ar2-ar1
+                })[required index no.]
+
+    19) some() :- If atleast one element satisfies the condition then it returns true
+        syntax :- array.some((element,index)=>{
+                        return element >= 5
+                    })
+
+    20) every() :- If all elements satifies the condition then only it returns true
+        syntax :- array.some((element,index)=>{
+                        return element >= 5
+                    })
+
+    21) fill() :- To replace existed elemnts with new elemnts
+        syntax :- console.log(array.fill(5))
+
+    22) flat() :- This function is used to create single dimensional array from multi dimensional array
+        syntax :- console.log(multi dimensional array.flat(infinity))
+
+    23) flatmap() :- The combination of flat() and map() is called flatmap()
+
+    24) reverse() :- This function is used to reverse the array elements
+        syntax :- array.reverse()
+
+    25) join() :- This function is used to join the characters
+
+    26) padStart() :- This function is used to increase the length of string by adding characters at begining
+        syntax :- string.padStart(required length,which character to be added)
+
+    27) padEnd() :- This function is used to increase the length of string by adding characters at ending
+        syntax :- string.padEnd(required length,which character to be added)
+
+    28) substr() :- This is used to print substrings which are present in main String
+        syntax :- string.substr(index of required string, length of required string)
+
+    28) substring() :- This is used to print substrings which are present in main String
+        syntax :- string.substring(included string index, excluded string index)
+
+    29) repeat() :- This is used to repeat the elements or characters
+        syntax :- string.repeat(no. of times to repeat)
+    
+    30) lastIndex() :- This is used to know the last index of repeated elements
+        syntax :- array.lastIndex(required number)
+
+    * the drawback of replace() is that it replaces only 1st element in string to avoid that we go for regular expression
+
+
+
+
+
+
+
+                            ----- Concatination of arrays -----
+
+        This is called as a spread operator and its symbol is "..." which is introduced in ES6
+            syntax:- In older version - console.log(concat(ar1,ar2))
+                present - console.log([...array1,...array2])
+
+
+
+
+                            ---- Immutability and Mutability -----
+
+    -> Immutability provides exact duplicate copy for verification
+        * Here code comparison is easy
+        * Here spread operator(...) is used
+        * It takes more memory
+         syntax :- let ar1=[3,2,1,4,5]
+                    let ar2=[...ar1]
+                    console.log(ar1 or ar2)
+
+    -> Mutability means modifying the original file
+        * Here code execute fast
+        * It takes less memory
+        * Here "=" is used to represent
+         syntax :- let ar1=[3,2,4,1]
+                    let ar2=ar1
+                    console.log( ar1 or ar2)
+
+  * forEach loop is used to iterate the arrays
+  * for...in loop is used to iterate the json objects
+    syntax :- for(let key in {}){
+                console.log(key,typeof key, obj1[key])
+            }
+  * for...of loop is used to iterate the data structures
+    syntax :- for(let value of [40,2,1,5,60]){
+                    console.log(value)
+                }
+
+
+
+
+
+
+                                --- JSON ---
+
+ -> JSON : Java Script object Notation and it is used to transfer the data over the network
+ -> We can store json data in variables
+ -> objects represented in { } ; arrays represented in  [ ]
+ -> In this data contains key & value pairs and they seperated by using ":"
+  -> one key,value pair and other pair is seperated by using ","
+   * eg:- var obj1={
+                    sub1:"apple",
+                    sub2:"mango"
+                    }
+-> JSon is light weight that means less burden on hardware
+-> Json is also called as java script objects
+ * XML : Older version to transfer data (heavy weight)
+ * Json is latest version
+ -> This Json is used in booting time for lazy loading
+ -> Here we have assign() :- This function is used to merge the keys & values of different JSON objects
+ -> Not only assign function we can use spread operator also for mergin (Eg :- console.log({...obj1,...obj2}))
+
+
+  ** Json Server :- This is used to develop the rest services also called as API calls
+                eg :- GET request, POST request, PUT request, delete,etc
+ -> JSON server supports only JSON data 
+ -> Default port no. of Json Server is 3000
+ -> To test API calls we need postman Software
+
+   --- To install Json server :-
+
+                 1) open system command prompt and type "npm install -g json-server"
+                2) To install postman software type "postman plugin chrome" in google
+    At execution :- If we want JSON data JSON server ( after completion program open terminal and select command prompt now type "json-server --watch filename.json")
+
+ 
+    ** Json Operations :
+
+    1) for sorting :- link?_sort=id&_order=desc
+    2) for range :- link?_start=id no.(which is includes)&_end=id no.(which is excluded)
+    3) for comparison :- link?salary_gte=15000&salary_lte=20000 (where gte- greater than or equal , lte- lesser than or equal)
+        * _ne=4 (where ne = not equal)
+    4) for searching operation :- link?q=nike
+    5) for limiting :- _limit = 3
+        
+
+
+
+
+                                        ----- AJAX CALLS -----
+
+    ** By default javascript is synchronous but it convert  to asynchronous by using callbacks
+    -> AJAX calls means execution of network calls or API calls independently which is also called as asynchronous calls
+    -> we can AJAX calls by using Angular , React Js ,Vue Js ,Jquery and javascript also but it is outdated
+    -> JQUERY is a Java script Library
+        * It can be used by the help of "jquery cdn" paste in our html page
+        * In this we have "ajax()" function which is used to make asynchronous calls
+        * "$" symbol is used to recognise jquery Library
+    syntax :- $.ajax({
+                    method : "required method"
+                    url : "postman link or json link"
+                    success : (posRe)=>{console.log(posRe)}
+                    error : (errRe)=>{console.log(errRe)}
+                }) 
+
+    ->* To connect jquery(ajax) with json server :
+       1) create json file
+       2) deploy "json file" in server by using following command
+            i.e. json-server --watch filename.json
+        3) Test above url with postman whether working or not
+        4) create html file for jquery application  in that deploy the json url
+
+
+
+
+                                    --- Promises ---
+
+    * Proper communication between producer and consumer is called Promises
+    * It has 3 states or results :- 1) success , 2) pending , 3) failure
+    * We can create promises by using "promise" class
+    * we will consume promises in 2 ways :- 1) then() [old approach] , 2) async and await [ES9]
+    * Promises also called as special javascript objects
+    * We are not used promises in real time because they are eager loading
+     syntax :- let promise1 = new Promise((succes state,error state)=>{
+                            success state ("discuss")
+                        })
+                        promise1.then((posRe)={console.log(posRe)},(erRe)=>{console.log(erRe)})
+                                or
+                        promise.all([promise1,promise2,..etc]).then((posRe)=>{console.log(posRe)},(errRe)=>{console.log(errRe)})
+     async and await syntax :- (async ()=>{
+                                console.log(await filename())
+                                })()
+    -> race() :- this is used to find which promise class has less time by giving it as output
+        syntax :- promise.race([promise1,promise2,...]).then(()=>{},()=>{})
+    * As promises are outdated so promises replaces is observable
+
+
+
+
+
+                                ---- CALLBACKS ----
+                            
+    -> Passing one function to another function as an argument is called callback
+        simple eg :- function fun1(ar1){
+            console.log(ar1())
+        }
+        fun1(function fun2(){return "hlo"})     // hlo
+    -> if 3rd call back is depends on 2nd call back where as 2nd call back is depends on  1st call back and so on these
+        applications are called as callback hell
+    -> This callback hell is suggestable in real time and this can be overcome by promises
+
+
+
+
+                            ---- Clousers ----
+
+    -> if inner function access the outer function data is called Clousers
+                            (or)
+        Accessing outer function data as well as global data by inner function is called Clousers
+    * var keyword won't have capability to maintain multiple copies in clousers due to this bug old values replaces with new value
+     this bug can be avoid by let keyword and IIFE format
+
+
+
+
+
+
+                            ----- Data Structures -----
+
+    -> In json if we want to add keys and values to empty object then old keys is replaced with new key to avoid this bug
+        data structures are introduced
+    * there are 4 types of data structures they are :-
+        1) map data structure 2) weakmap data structure 3) set data structure 4) weakset data structure  
+    * to know API of data structures use "console.dir(data structure)"
+    -> functions involved in directories of data structures are :
+        1) clear() 2) constructor() 3) delete() 4) get() 5) has() 6) keys() 7) values() 8)set() 9) size property [it is not a function]
+    * "map data Structure" won't allows "duplicate keys"
+    * "map" allows "all types of data types" but if we want to allow "only json data" then weakmap is used
+    -> "set data structure" is used to eliminate the "duplicate data"
+        * "set" allows "all data types" but if we want to allow "only json data" then weakset is used
+
+
+
+
+                                ----- Event Bubling and Event Capturing -----
+
+    -> if sub-child includes output of child and parent where as child includes output of parent but parent has output of parent only
+        order : sub-child :- subchild ,child ,parent
+                child :- child , parent
+                parent :- parent
+    -> If Above output occurs in reverse order is called event capturing (or) the reverse approach of event bubling is called
+       event capturing
+        order : sub-child :- parent , child , subchild
+                child :- parent , child
+                parent :- parent  
+
+
+
+
+                        ------ Extra and Important functions -------
+
+    -> call() :- If we want to "create communication between 2 different memory locations" in "json file" then we use this function
+
+    -> apply() :- "It is similar to call()" but only difference is that In call() we have to "supply values or parameters"
+        "independently" where as in supply() we can "supply values or parameters" as an "array"
+
+    -> bind() :- This function is used to merge different memory locations
+    
+
+
+
+                            ------ Currying ------
+
+    -> Converting complex business logic to simple business logic is called Currying
+
+
+
+                            ----- Debouncing and Throttling -----
+
+    -> consider latest request and ignoring all other requests is called debouncing
+
+    -> In Throttling concept it consider only first request and it ignores all other requests with in time and it again takes as 
+        new request after respected time completed
+
+
+
+                                    ----- Events ------
+
+    -> when" user or browser manipulates the page" is called event
+    * Types of events :- 1) button events 2) on mouseover and on mouseout events 3) onfocus and onblur
+                            4) onkeydown and onkeyup
+
+
+
+
+                                    ----- regular expressions -----
+
+    -> These are also called as Validations
+    * These are used to "check" the "string,number or condition"  is present in given regular expression by using "match()"
+
+
+
+
+                                ---- DOM Manipulations -----
+
+    -> DOM = document object model
+    -> if whole html loaded into browser engine then document object prepared
+    * difference between "innerHTML" and "text" is that innerHTML returns the tag which contains data where as text returns the
+        data directly
+
+
+
+------------------------------------------------*****************---------------------------------------------------------
+    

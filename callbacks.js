@@ -141,7 +141,7 @@ add2(7,(addres,error)=>{
     this type of applications is called as callback hell
     * This callback hell is not suggestable in real time this can overcome bye Promises
 
-*/
+
 
 
 
@@ -167,3 +167,9 @@ function mul(num){
     let MulRes=await mul(5)
     console.log(addRes,subRes,MulRes)
 })()                              // 10 3 20
+
+
+*/
+
+
+
