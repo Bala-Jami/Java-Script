@@ -94,45 +94,6 @@ console.log(longest("Hello guysysysysysysys this geeks geekkkkkkkk gekforgek"))
 -->
 
 
-
-<!--
-<script>
-
-    //task is to print the maximum difference occurs between two adjacent elements
-    
-  //  let ar1=[1,2,3,4]
- // let ar2=console.log(ar1.slice(0,2))
- // let ar3=console.log(ar1.slice(1,3))
-  //  let ar4=console.log(new Set([...ar2,...ar3]))
-
-function fun1(ar1){
-     
-    let ar3= [ar1.slice(0,2).reduce((fstv,nxtv)=>{
-        return nxtv-fstv
-    }),ar1.slice(1,3).reduce((fstv,nxtv)=>{
-        return nxtv-fstv
-    }),ar1.slice(2,4).reduce((fstv,nxtv)=>{
-        return nxtv-fstv
-        
-    })].sort((a,b)=>{
-        return b-a
-    })[0]
-    
-   return ar3
-    
-    
-}
-
-console.log( fun1([2,3,1,4]))
-console.log( fun1([2,-3,1,-4,6]))
-
-
-</script>
-
--->
-
-
-
 <!--
 
 <script>
@@ -319,6 +280,61 @@ console.log(fun1(""))
 
 </script>
 
+
+
+
+
+
+// task is to add values to empty array when the number is divided by 3 or 5 or 7 and less than maximum number
+<script>
+function fun1(ar1){
+    
+    let num=[]
+    
+    for(i=0;i<ar1;i++){
+     
+        if(i%3 ==0 || i%5==0 || i%7==0){
+            num.push(i)
+        }
+    }
+    
+    let c= num.reduce((ar2,ar3)=>{ return ar3+ar2})
+    return c
+}
+console.log(fun1(15))
+</script>
+
 -->
 
+<script>
+    
+    //task is to print the maximum difference occurs between two adjacent elements
 
+    function fun1(ar1,ar2){
+        let num=[]
+        let d
+        let c
+        if (ar1.length==ar2){
+
+            for(i=0;i<=ar1.length;i++){
+            
+                c= ar1.slice(i,i+2)
+                
+                if(c.length>=2){
+                   d= c.reduce((fst,nxt)=>{
+                       return nxt-fst
+                   })
+                num.push(d)
+                }        
+            }
+        
+        let e =num.sort((ar1,ar2)=>{ return ar2-ar1})[0]
+        return e
+        }
+        else {
+        return "error"
+        }
+    }
+    console.log(fun1([4,71,8,9,10,4,3,8,17,18,28,99],12))
+    console.log(fun1([5,8,2,6,10,5,7,8,2,8,16],5))
+</script>
