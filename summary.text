@@ -134,6 +134,31 @@
 
 
 
+
+
+                                    ---- optional parameters ----
+
+        While calling functions we can make few parameters are optional
+        * It is represented by "?"
+        -> optional parameters will work only in "typescript" environment
+        ->Type Script is a programming language which follows OOPS and it can save with extension ".ts" (which is given by microsoft)
+        -> we can install typescript software by using following command in system command prompt
+                "npm install -g typescript" 
+                (where npm- node packaging manager and g stands for global Installation)
+        * conversion of typescript code to equivalent javascript code is called "transpilation"
+        * "tsc" is the tool which performs transpilation (where tsc= typescript compiler)
+        -> At execution :- first type in terminal -> tsc filename.ts -> press enter -> node filename.js
+    syntax :- function fun1(ar1?:string,ar2?:number):void{
+                    //  logic
+                }
+                fun1("hlo",10) 
+        * Always optional parameters should be "last" in combination of "regular and optional parameters"
+
+
+
+
+
+
                         --- Arithmetic Operations ---
 
         In case of any arithmetic operations string data type is internally converted to number data type except in "+" operator
@@ -193,30 +218,8 @@
 
                                     ---- About constant keyword ----
 
-                * This is also used to declare the variables  but here we can't modify data in it   [ES6]
-                -> By using const keyword we can't replace (or) modify "entire array or json object" but we can modify the values in it
-
-
-
-
-
-                                ---- optional parameters ----
-
-        While calling functions we can make few parameters are optional
-        * It is represented by "?"
-        -> optional parameters will work only in "typescript" environment
-        ->Type Script is a programming language which follows OOPS and it can save with extension ".ts" (which is given by microsoft)
-        -> we can install typescript software by using following command in system command prompt
-                "npm install -g typescript" 
-                (where npm- node packaging manager and g stands for global Installation)
-        * conversion of typescript code to equivalent javascript code is called "transpilation"
-        * "tsc" is the tool which performs transpilation (where tsc= typescript compiler)
-        -> At execution :- first type in terminal -> tsc filename.ts -> press enter -> node filename.js
-    syntax :- function fun1(ar1?:string,ar2?:number):void{
-                    //  logic
-                }
-                fun1("hlo",10) 
-        * Always optional parameters should be "last" in combination of "regular and optional parameters"
+             * This is also used to declare the variables  but here we can't modify data in it   [ES6]
+        -> By using const keyword we can't replace (or) modify "entire array or json object" but we can modify the values in it
 
 
 
@@ -357,6 +360,7 @@
 
                             ----- Concatination of arrays -----
 
+    * This is used to combine the two or morethan two arrays into single array
         This is called as a spread operator and its symbol is "..." which is introduced in ES6
             syntax:- In older version - console.log(concat(ar1,ar2))
                 present - console.log([...array1,...array2])
@@ -447,7 +451,7 @@
 
     ** By default javascript is synchronous but it convert  to asynchronous by using callbacks
     -> AJAX calls means execution of network calls or API calls independently which is also called as asynchronous calls
-    -> we can AJAX calls by using Angular , React Js ,Vue Js ,Jquery and javascript also but it is outdated
+    -> we can make AJAX calls by using Angular , React Js ,Vue Js ,Jquery and javascript also but it is outdated
     -> JQUERY is a Java script Library
         * It can be used by the help of "jquery cdn" paste in our html page
         * In this we have "ajax()" function which is used to make asynchronous calls
@@ -503,7 +507,7 @@
         fun1(function fun2(){return "hlo"})     // hlo
     -> if 3rd call back is depends on 2nd call back where as 2nd call back is depends on  1st call back and so on these
         applications are called as callback hell
-    -> This callback hell is suggestable in real time and this can be overcome by promises
+    -> This callback hell is not suggestable in real time and this can be overcome by promises
 
 
 
@@ -529,7 +533,7 @@
         1) map data structure 2) weakmap data structure 3) set data structure 4) weakset data structure  
     * to know API of data structures use "console.dir(data structure)"
     -> functions involved in directories of data structures are :
-        1) clear() 2) constructor() 3) delete() 4) get() 5) has() 6) keys() 7) values() 8)set() 9) size property [it is not a function]
+        1) clear() 2) constructor() 3) delete() 4) get() 5) has() 6) keys() 7) values() 8) size property [it is not a function]
     * "map data Structure" won't allows "duplicate keys"
     * "map" allows "all types of data types" but if we want to allow "only json data" then weakmap is used
     -> "set data structure" is used to eliminate the "duplicate data"

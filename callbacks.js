@@ -169,7 +169,32 @@ function mul(num){
 })()                              // 10 3 20
 
 
+
+
+
+var a ={}
+var b=a
+a.v=1;
+b.v=2
+console.log(a.v)        // 2
+
+
+
+var Myclass= function (n){
+    this.n=n
+}
+Myclass.square=function(){
+    return (this.n * this.n)
+}
+var object = new Myclass(4)
+alert(object.square())              // error
+
 */
 
-
-
+myclass=function(){
+    this.a="hlo"
+    this.b="hi"
+}
+myclass.prototype.a='john'
+myclass.prototype.c=12
+obj=new myclass()

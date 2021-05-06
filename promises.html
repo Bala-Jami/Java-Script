@@ -101,3 +101,21 @@
 // * Due to Promises outdated, Promises replaces is observable 
 -->
 
+<html>
+    <body>
+        <ul>
+            <li>Alice</li>
+            <li>Bob</li>
+            <li>Ave</li>
+        </ul>
+        <script>
+            var items=document.getElementsByTagName("li")
+            for(var i=0;i<items.length;i++){
+                let list=items[i]
+                list.onclick=function(){
+                    console.log(i)
+                }
+            }
+        </script>
+    </body>
+</html>

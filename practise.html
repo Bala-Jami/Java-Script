@@ -304,7 +304,9 @@ function fun1(ar1){
 console.log(fun1(15))
 </script>
 
--->
+
+
+
 
 <script>
     
@@ -338,3 +340,119 @@ console.log(fun1(15))
     console.log(fun1([4,71,8,9,10,4,3,8,17,18,28,99],12))
     console.log(fun1([5,8,2,6,10,5,7,8,2,8,16],5))
 </script>
+
+
+
+
+<script>
+
+    // If the column number is defined undefined for any error object,then define it manually
+
+    try{
+        let er=new Error(0,"filename","format not support")
+        if(er.columnNumber==undefined)
+        er.columnNumber=1
+            throw er
+        
+    }
+    
+    catch(b){
+        console.log("Error:"+b.message)
+        console.log("At column no. :"+b.columnNumber)
+    }
+</script>
+
+
+
+
+
+
+<script>
+
+// task is to print extract each word from given string every time upto empty string occurs
+function fun1(ar1){
+let b=ar1.split("")
+let c
+let d
+let num=[]
+for(i=0;i<=b.length;i++){
+    
+    c=b.slice(i).join("")
+    
+    
+    num.push(c)
+    }
+    return num
+    // return num.join()            // string,tring,ring,ing,ng,g,
+    
+}
+console.log(fun1("string"))         // ["string", "tring", "ring", "ing", "ng", "g", ""]
+console.log(fun1("anjskv "))        //  ["anjskv ", "njskv ", "jskv ", "skv ", "kv ", "v ", " ", ""]
+</script>
+
+
+
+
+<script>
+
+    // task is  to generate combinations of a string
+
+    function fun1(ar1){
+        let num=[]
+        let c
+        for(let i=0;i<ar1.length;i++){
+            for(j=i+1;j<ar1.length+1;j++){
+                c=ar1.slice(i,j)
+                num.push(c)
+            }
+            
+        }
+        return num
+    }
+    console.log(fun1("string"))
+    console.log(fun1("dog"))        //  ["d", "do", "dog", "o", "og", "g"]
+</script>
+
+
+
+
+
+<script>
+
+    // task is to place a strings in alphabetical order
+
+// 1)
+    let fun1=(ar1)=>{
+        let e=prompt("please enter")
+        let c=e.split("").sort().join("")
+        return c
+       
+    }
+    console.log(fun1())        // based on given text
+
+
+
+    // 2)
+    let fun2=(ar1)=>{
+        
+        let c=ar1.split("").sort().join("")
+        return c
+        
+    }
+    console.log(fun2("string"))                 // ginrst
+    
+</script>
+
+-->
+
+<script>
+    let fun1=(ar1)=>{
+        
+        return ar1.join(";")
+       // return [ar1.join(" ; ")]            // ["a,2 ; b,3"]
+          
+         
+    }
+    console.log(fun1([["a","2"],["b","3"]]))            //  a,2 ; b,3
+</script>
+

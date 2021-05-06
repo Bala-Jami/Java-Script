@@ -32,7 +32,7 @@ console.log(
 
 
 
-let data=b=["file/dir1/hi",
+let data=["file/dir1/hi",
             "file/dir2/hello",
             "file/dir2/hi",
             "file/dir1/hello"]
@@ -73,7 +73,7 @@ console.log(
 
 
 
-                              
+                             
     console.log(
         "wlcm to Es11".split("")
     )                               //      [  'w', 'l', 'c', 'm',
@@ -82,12 +82,22 @@ console.log(
                                         
 
     console.log(
-        "wlcm to Es11".split("").map((element,index)=>{
-            return[element]
+        "wlcm to Es11".split(" ").map((element,index)=>{
+            return [element]
         })
     )                                           //[ [ 'wlcm' ], [ 'to' ], [ 'Es11' ] ] 
+*/ 
 
-*/
+
+
+
+// ------------------------------------------------------------------------------------------------------------------------
+
+
+// 1) 
+        
+
+
 
 
 
